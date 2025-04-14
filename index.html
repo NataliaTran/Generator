@@ -1,68 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Śmiechosfera</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Śmiechosfera</title>
+
+  <!-- Ładna czcionka z Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Główne style -->
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-  <h1>Śmiechosfera</h1>
-    
-    <!-- Menu -->
-     <label for="menu">Wybierz motyw:</label>
-<select id="menu" name="menu">
-  <option value="jasny">jasny</option>
-  <option value="ciemny">ciemny</option>
-</select>
-
-  <!-- Nawigacja -->
-       <div>
-     <section>
-  <div>
-    <h2>MENU</h2>
-    <div>
-    <nav>
-     
-      <button>
-        <a href="czarny.html">
-          Czarny humor
-        </a>
-      </button>
-
-      <button>
-        <a href="motywacja.html">
-          Motywacja
-        </a>
-      </button>
-
-      <button>
-        <a href="humor.html">
-          Na poprawę humoru
-        </a>
-      </button>
-
-      <button>
-        <a href="jas.html">
-          O Jasiu
-        </a>
-      </button>
-
-      <button>
-        <a href="cos.html">
-          Coś
-        </a>
-      </button>
-
-      <button>
-        <a href="nwm.html">
-          Nie wiem
-        </a>
-      </button>
-     </nav>
-    </div>
+  <!-- Górna belka -->
+  <div class="top-bar">
+    <h1>Śmiechosfera</h1>
+    <div class="theme-toggle">
+  <label class="switch">
+    <input type="checkbox" id="themeToggle">
+    <span class="slider"></span>
+  </label>
+  <span id="themeLabel">Jasny</span>
+</div>
   </div>
-</section>
-    </div>
-     <script src="script.js"></script>
+
+  <!-- MENU -->
+  <section>
+    <h2>MENU</h2>
+    <nav class="menu-grid">
+      <a href="czarny.html"><button>Czarny humor</button></a>
+      <a href="motywacja.html"><button>Motywacja</button></a>
+      <a href="humor.html"><button>Na poprawę humoru</button></a>
+      <a href="jas.html"><button>O Jasiu</button></a>
+      <a href="cos.html"><button>Coś</button></a>
+      <a href="nwm.html"><button>Nie wiem</button></a>
+    </nav>
+  </section>
+
+  <!-- Skrypt do zmiany motywu -->
+  <script src="script.js"></script>
 </body>
 </html>
