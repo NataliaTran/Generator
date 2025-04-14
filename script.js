@@ -10,7 +10,8 @@ function generateJoke() {
         "Jakie są ulubione napoje programistów? Java i C++.",
         "Dlaczego matematyka jest smutna? Bo ma za dużo problemów.",
         "Co robi fizyk na imprezie? Rozwiązuje problemy!",
-        "Dlaczego komputer ma w sobie duszę? Bo to laptop!"
+        "Dlaczego komputer ma w sobie duszę? Bo to laptop!",
+        "rzychodzi baba do lekarza z żabą na głowie. Lekarz patrzy na nią zdziwiony i pyta: -Co się stało?- A żaba na to: -No co, doktorze? Chyba mnie ugryzła!-"
     ];
 
     // Losowy wybór żartu
