@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Nie wiem</title>
-     <link rel="stylesheet" href="main.css">
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
      <nav>
 <a href="index.html"><h1>Nwm</h1></a>
     </nav>
+<!-- Kontener z Flexboxem dla stworka i generatora -->
+    <div class="container">
+        <!-- Stworek po lewej -->
+        <div class="creature">
+            <img src="https://www.calmean.com/wp-content/uploads/2023/03/jak-dbac-o-kota-1080x675.jpg" alt="Kot" id="creatureImage">
+        </div>
 
-      <!-- Stworek -->
-    <div>
-        <img src="https://www.calmean.com/wp-content/uploads/2023/03/jak-dbac-o-kota-1080x675.jpg" alt="Kot">
+        <!-- Generator po prawej -->
+        <div class="generator">
+            <button id="generateButton">Generuj</button>
+            <input type="text" id="jokeField" placeholder="Kliknij, by wygenerować żart" readonly>
+        </div>
     </div>
 
- <!-- Generator -->
-    <div>
-        <button>Generuj</button>
-    </div>
      <script src="script.js"></script>
 </body>
 </html>
