@@ -107,10 +107,6 @@ nav a:hover {
     margin-top: 10px;
 }
 
-input {
-    text-wrap: pretty;
-}
-
 /* Przycisk */
 #generateButton {
     font-family: inherit;
