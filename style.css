@@ -105,7 +105,6 @@ nav a:hover {
     resize: none;
     transition: all 0.3s ease;
     margin-top: 10px;
-    text-wrap: pretty;
 }
 
 /* Przycisk */
