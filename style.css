@@ -1,83 +1,78 @@
-/* Komiksowa czcionka */
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 
 body {
     font-family: 'Comic Neue', cursive, sans-serif;
-    background: linear-gradient(135deg, #fceabb, #f8b500); 
-    color: #333;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    color: #2f4858;
     text-align: center;
     padding: 50px 20px;
     margin: 0;
-    background-attachment: fixed; 
-    background-size: cover; 
-    height: 100vh; 
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
 }
 
 /* Nagłówek */
 nav a {
-    font-family: 'Comic Neue', cursive, sans-serif;
-    font-size: 3em; 
-    color: #f1c40f; 
-    text-decoration: none; 
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); 
-    transition: all 0.3s ease; 
-    font-weight: bold; 
-    padding-bottom: 5px; 
-   
+    font-size: 3em;
+    color: #00887c;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 nav a:hover {
-    color: #e67e22; 
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6); 
-    transform: scale(1.1); 
-    letter-spacing: 2px; 
-    border-bottom-color: #e67e22; /
+    color: #2ca564;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
 }
 
-
-
-
-/* Kontener z Flexboxem */
+/* Kontener */
 .container {
+    background-color: #f0f8f6;
+    border: 3px solid #00887c;
+    box-shadow: 5px 5px 15px rgb(230, 207, 76);
+    border-radius: 20px;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 30px;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
-    transition: all 0.3s ease-in-out; /* Płynne przejścia przy zmianach */
+    margin: 40px auto;
 }
 
-/* Stworek po lewej */
+/* Obrazek */
 .creature {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 250px;
-    height: 200px;
-    transition: transform 0.3s ease-in-out; /* Animacja transformacji */
 }
 
 #creatureImage {
     width: 100%;
+    max-width: 350px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    animation: zoomIn 0.8s ease-out forwards;
 }
 
-/* Efekt hover dla stworka */
-.creature:hover {
-    transform: scale(1.05); /* Powiększenie stworka */
+/* Animacja Zoom In */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-#creatureImage:hover {
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-}
-
-/* Generator po prawej */
+/* Generator */
 .generator {
     flex: 1;
     display: flex;
@@ -88,47 +83,81 @@ nav a:hover {
     min-width: 250px;
 }
 
-/* Pole tekstowe do wyświetlania żartu */
+/* Pole tekstowe */
 #jokeField {
     font-family: inherit;
     padding: 15px;
     width: 100%;
-    height: 120px;
-    border: 3px solid #f1c40f;
+    min-height: 120px;
+    border: 3px solid black;
     border-radius: 15px;
     font-size: 1.2em;
-    background-color: #f7f7f7;
-    color: #333;
+    background-color: #e6f5f3;
+    color: #2f4858;
     text-align: center;
     box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
     resize: none;
+    overflow: visible;
     transition: all 0.3s ease;
     margin-top: 10px;
+    height: auto;
+    white-space: pre-wrap;
 }
 
-/* Przycisk */
+/* Przycisk generowania */
 #generateButton {
     font-family: inherit;
     padding: 12px 25px;
     margin-top: 20px;
     font-size: 1.2em;
-    background-color: #f1c40f;
-    color: #000;
-    border: 3px solid #000;
+    background-color: #2ca564;
+    color: #fff;
+    border: 3px solid black;
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 3px 3px 0px #000;
+    box-shadow: 3px 3px 0px black;
+    animation: pulse 2.5s infinite ease-in-out;
 }
 
 #generateButton:hover {
-    background-color: #e67e22;
-    box-shadow: 5px 5px 0px #000;
+    background-color: #00887c;
+    box-shadow: 5px 5px 0px #006877;
     transform: translateY(-2px);
 }
 
-/* Animacja - efekt drżenia */
+/* Przycisk powrotu */
+.back-button-container {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #2f4858;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 3px 3px 0px #00000000;
+}
+
+.back-button:hover {
+    background-color: #2f4858;
+    transform: translateY(-2px);
+}
+
+/* Efekt pulsowania */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* Animacja drżenia */
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     20% { transform: translate(-2px, 2px) rotate(-2deg); }
