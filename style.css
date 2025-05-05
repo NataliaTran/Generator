@@ -148,7 +148,7 @@ nav a:hover {
 
 .back-button:hover {
     background-color: #2ca564; /* ten sam kolor co przycisk 'generate' */
-    color: #fff;
+    color: white;
     transform: translateY(-2px);
 }
 
