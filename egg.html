@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Easter Egg</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐣 Easter Egg</title>
+  <link rel="stylesheet" href="egg.css">
 </head>
 <body>
-    <h1>Easter Egg</h1>
+  <!-- Przycisk do strony głównej -->
+  <a href="index.html" class="back-btn">← Strona główna</a>
+ 
+  <div class="container">
+    <h1>🐣 Easter Egg Znaleziony!</h1>
+    <p>Kliknij przycisk, aby odkryć niespodziankę 🎁</p>
+    <button onclick="showMeme()">Kliknij po niespodziank</button>
+    <div id="meme-container">
+      <img id="meme" src="https://i.pinimg.com/236x/4f/54/29/4f5429df5ea6361fa8d3f08dfcdccdf9.jpg" alt="Śmieszny mem">
+    </div>
+  </div>
+
+  <script src="egg.js"></script>
 </body>
 </html>
