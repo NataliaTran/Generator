@@ -122,8 +122,9 @@ nav a:hover {
 
 #generateButton:hover {
     background-color: #00887c;
-    box-shadow: 5px 5px 0px #006877;
+    box-shadow: 3px 3px 0px black; /* ten sam cień jak w stanie normalnym */
     transform: translateY(-2px);
+    border: 3px solid black; /* upewniamy się, że obramowanie pozostaje */
 }
 
 /* Przycisk powrotu */
