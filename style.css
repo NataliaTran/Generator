@@ -172,3 +172,39 @@ nav a:hover {
 .shake {
     animation: shake 0.4s;
 }
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 2em;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .generator, .creature {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    #jokeField {
+        font-size: 1em;
+        min-height: 100px;
+    }
+
+    #generateButton {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .back-button-container {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .back-button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
