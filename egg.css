@@ -1,0 +1,126 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #dceefc);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Przycisk Strona Główna */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.2rem;
+  background-color: #00b894;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #019875;
+}
+
+.container {
+  text-align: center;
+  padding: 60px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+  max-width: 700px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+button {
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #019875;
+  transform: scale(1.05);
+}
+
+#meme-container {
+  display: none;
+  margin-top: 40px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#meme-container.show {
+  display: block;
+  opacity: 1;
+}
+
+#meme {
+  width: 100%;
+  max-width: 80%; /* Mniejsza szerokość */
+  max-height: 600px; /* Mniejsza wysokość */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+#meme:hover {
+  transform: scale(1.03); /* Subtelne powiększenie po najechaniu */
+}
+
+
+/* Responsywność */
+@media (max-width: 600px) {
+  .container {
+    padding: 40px 20px;
+    }
+ #meme {
+    max-width: 90%;
+    max-height: 400px;
+}
+
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+}
