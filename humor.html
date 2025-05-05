@@ -16,16 +16,19 @@
             <img src="kot.png" alt="Kotek" id="creatureImage">
         </div>
 
-        <!-- Generator po prawej -->
+          <!-- Generator po prawej -->
         <div class="generator">
-            <input type="text" id="jokeField" placeholder="Kliknij, by wygenerować żart" readonly>
+            <!-- Pole na żart jako <div> zamiast <input> -->
+            <div id="jokeField" class="joke-box">Kliknij, by wygenerować żart</div>
             <button id="generateButton">Generuj</button>
         </div>
     </div>
-<div class="back-button-container">
-    <a href="index.html" class="back-button">← Strona Główna </a>
-</div>
-     <script>
+
+    <!-- Przycisk powrotu -->
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">← Strona Główna</a>
+    </div>
+    <script>
         // Funkcja, która generuje żart
 async function generateJoke() {
     jokeField.innerText = "⏳ Generuję żart..."; // Wstawienie tekstu 'w trakcie ładowania'
@@ -43,7 +46,7 @@ async function generateJoke() {
                 messages: [
                     {
                         role: "user",
-                        content: "Powiedz mi dowcip w stylu suchar"
+                        content: "Powiedz mi dowcip który nie ma sensu"
                     }
                 ]
             })
