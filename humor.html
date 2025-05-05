@@ -25,6 +25,48 @@
 <div class="back-button-container">
     <a href="index.html" class="back-button">← Strona Główna </a>
 </div>
+     <script>
+        // Funkcja, która generuje żart
+async function generateJoke() {
+    jokeField.innerText = "⏳ Generuję żart..."; // Wstawienie tekstu 'w trakcie ładowania'
+
+    try {
+        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer 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", // Twój klucz
+                "HTTP-Referer": "https://nataliatran.github.io/Generator/",
+            },
+            body: JSON.stringify({
+                model: "openai/gpt-3.5-turbo",
+                messages: [
+                    {
+                        role: "user",
+                        content: "Powiedz mi dowcip w stylu suchar"
+                    }
+                ]
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.choices && data.choices.length > 0) {
+            const joke = data.choices[0].message.content.trim();
+            jokeField.innerText = joke; // Wyświetlenie żartu
+        } else {
+            jokeField.innerText = "❌ Błąd API: " + (data.error?.message || "Nieznany błąd");
+            addShake(jokeField); // Animacja w przypadku błędu
+        }
+
+    } catch (error) {
+        jokeField.innerText = "❌ Błąd połączenia: " + error.message;
+        addShake(jokeField); // Animacja w przypadku błędu
+    }
+}
+
+    </script>
+
      <script src="script.js"></script>
 </body>
 </html>
