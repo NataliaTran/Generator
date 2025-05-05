@@ -146,9 +146,11 @@ nav a:hover {
 }
 
 .back-button:hover {
-    background-color: #2f4858;
+    background-color: #2ca564; /* ten sam kolor co przycisk 'generate' */
+    color: #fff;
     transform: translateY(-2px);
 }
+
 
 /* Efekt pulsowania */
 @keyframes pulse {
