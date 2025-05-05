@@ -163,3 +163,58 @@ input:checked + .slider {
 input:checked + .slider::before {
   transform: translateX(24px);
 }
+
+/* Dla ekranów max 768px (tablety i telefony) */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .top-bar h1 {
+    font-size: 36px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* z 3 na 2 kolumny */
+    gap: 20px;
+  }
+
+  .menu-grid button {
+    width: 160px;
+    height: 160px;
+    font-size: 16px;
+  }
+
+  section h2 {
+    font-size: 28px;
+  }
+}
+
+/* Dla bardzo małych ekranów, np. telefonów w pionie */
+@media (max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: 1fr; /* 1 kolumna */
+  }
+
+  .menu-grid button {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .top-bar h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  section h2 {
+    font-size: 24px;
+  }
+
+  body {
+    padding: 20px;
+  }
+}
+
