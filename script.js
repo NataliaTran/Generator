@@ -12,4 +12,32 @@ function addShake(element) {
     }, 400);
 }
 
+async function generateJoke(category) {
+jokeField.innerText = "⏳ Generuję żart...";
+generateButton.disabled = true;
+
+try {
+const response = await fetch("https://generator-bakend.onrender.com/api/joke", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ category }) // <-- wysyłamy kategorię
+});
+
+const data = await response.json();
+
+if (response.ok && data.joke) {
+    jokeField.innerText = data.joke;
+} else {
+    jokeField.innerText = "❌ Błąd API: " + (data.error || "Nieznany błąd");
+    addShake(jokeField);
+}
+} catch (error) {
+jokeField.innerText = "❌ Błąd połączenia: " + error.message;
+addShake(jokeField);
+}
+
+generateButton.disabled = false;
+};
 
