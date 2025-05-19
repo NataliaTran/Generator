@@ -25,13 +25,16 @@
     <div class="back-button-container">
     <a href="index.html" class="back-button">← Strona Główna </a>
 </div>
+<!-- ...reszta HTML... -->
+
+<script src="script.js"></script>
+<script>
+  generateButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    generateJoke("Typowe żarty o Jasiu");
+  });
+</script>
 </body>
-    
-     <script src="script.js"></script>
-    <script>
-        generateButton.addEventListener("click", (e) => {
-            e.preventDefault();
-            generateJoke("Typowe żarty o Jasiu");
-        });
-        </script>
+</html>
+
 </html>
