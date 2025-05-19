@@ -1,20 +1,17 @@
-
-// Pobranie przycisku i pola tekstowego
 const generateButton = document.querySelector("#generateButton");
 const jokeField = document.querySelector("#jokeField");
 
-// Funkcja dodająca efekt "drżenia" do pola tekstowego
+// Animacja drżenia
 function addShake(element) {
     element.classList.remove("shake");
-    void element.offsetWidth; // wymusza ponowne zastosowanie klasy
+    void element.offsetWidth;
     element.classList.add("shake");
+
+    setTimeout(() => {
+        element.classList.remove("shake");
+    }, 400);
 }
 
-// Dodanie zdarzenia kliknięcia na przycisk
-generateButton.addEventListener("click", (event) => {
-    event.preventDefault(); // Zapobiega przeładowaniu strony przy użyciu formularza
-    generateJoke(); // Generowanie żartu
-});
 async function generateJoke(category) {
 jokeField.innerText = "⏳ Generuję żart...";
 generateButton.disabled = true;
