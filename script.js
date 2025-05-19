@@ -27,11 +27,13 @@ const response = await fetch("https://generator-bakend.onrender.com/api/joke", {
 
 const data = await response.json();
 
-if (response.ok && data.joke) {
-    jokeField.innerText = data.joke;
-} else {
-    jokeField.innerText = "❌ Błąd API: " + (data.error || "Nieznany błąd");
-    addShake(jokeField);
+  if (response.ok && data.joke) {
+            jokeField.innerText = data.joke;
+            addShake(jokeField);  // <-- animacja przy poprawnym żarcie
+        } else {
+            jokeField.innerText = "❌ Błąd API: " + (data.error || "Nieznany błąd");
+            // animacja przy błędzie jeśli chcesz:
+            // addShake(jokeField);
 }
 } catch (error) {
 jokeField.innerText = "❌ Błąd połączenia: " + error.message;
