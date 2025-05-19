@@ -2,39 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Poprawe humoru</title>
-     <link rel="stylesheet" href="style.css"> 
+    <title>Czarny humor</title>
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <nav>
-<a href="egg.html"><h1>Na poprawę humoru</h1></a>
-    </nav> 
+     <nav>
+<a href="egg.html"><h1>Czarny humor</h1></a>
+     </nav>
 <!-- Kontener z Flexboxem dla stworka i generatora -->
     <div class="container">
         <!-- Stworek po lewej -->
         <div class="creature">
-            <img src="kot.png" alt="Kotek" id="creatureImage">
+            <img src="czarny humor.png" alt="Facet z wąsem" id="creatureImage">
         </div>
 
-          <!-- Generator po prawej -->
+       <!-- Generator po prawej -->
         <div class="generator">
             <!-- Pole na żart jako <div> zamiast <input> -->
             <div id="jokeField" class="joke-box">Kliknij, by wygenerować żart</div>
             <button id="generateButton">Generuj</button>
-        </div>
+        </div> 
     </div>
 
     <!-- Przycisk powrotu -->
     <div class="back-button-container">
         <a href="index.html" class="back-button">← Strona Główna</a>
     </div>
-    <script>
-        // Funkcja, która generuje żart
-<script src="script.js"></script>
+    <script src="script.js"></script>
     <script>
         generateButton.addEventListener("click", (e) => {
             e.preventDefault();
-            generateJoke("Naprawdę śmieszne żarty");
+            generateJoke("Śmieszne żarty po polsku które mają sens");
         });
         </script>
 </body>
