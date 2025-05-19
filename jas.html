@@ -2,38 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>O Jasiu</title>
+    <title>Czarny humor</title>
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
      <nav>
-<a href="egg.html"><h1>O Jasiu</h1></a>
-    </nav>
+<a href="egg.html"><h1>Czarny humor</h1></a>
+     </nav>
 <!-- Kontener z Flexboxem dla stworka i generatora -->
     <div class="container">
         <!-- Stworek po lewej -->
         <div class="creature">
-            <img src="jas.png" alt="Jaś Fasola" id="creatureImage">
+            <img src="czarny humor.png" alt="Facet z wąsem" id="creatureImage">
         </div>
 
-        <!-- Generator po prawej -->
+       <!-- Generator po prawej -->
         <div class="generator">
-            <input type="text" id="jokeField" placeholder="Kliknij, by wygenerować żart" readonly>
+            <!-- Pole na żart jako <div> zamiast <input> -->
+            <div id="jokeField" class="joke-box">Kliknij, by wygenerować żart</div>
             <button id="generateButton">Generuj</button>
-        </div>
+        </div> 
     </div>
+
+    <!-- Przycisk powrotu -->
     <div class="back-button-container">
-    <a href="index.html" class="back-button">← Strona Główna </a>
-</div>
-<!-- ...reszta HTML... -->
- <script src="script.js"></script>
+        <a href="index.html" class="back-button">← Strona Główna</a>
+    </div>
+    <script src="script.js"></script>
     <script>
         generateButton.addEventListener("click", (e) => {
             e.preventDefault();
-            generateJoke(" żarty o Jasiu ");
+            generateJoke("Polskie żarty o Jasiu");
         });
         </script>
 </body>
-</html>
-
 </html>
