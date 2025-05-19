@@ -28,47 +28,12 @@
     <div class="back-button-container">
         <a href="index.html" class="back-button">← Strona Główna</a>
     </div>
+    <script src="script.js"></script>
     <script>
-        // Funkcja, która generuje żart
-async function generateJoke() {
-    jokeField.innerText = "⏳ Generuję żart..."; // Wstawienie tekstu 'w trakcie ładowania'
-
-    try {
-        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer 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", // Twój klucz
-                "HTTP-Referer": "https://nataliatran.github.io/Generator/",
-            },
-            body: JSON.stringify({
-                model: "openai/gpt-3.5-turbo",
-                messages: [
-                    {
-                        role: "user",
-                        content: "Powiedz mi dowcip w stylu dark humor"
-                    }
-                ]
-            })
+        generateButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            generateJoke("O programistach");
         });
-
-        const data = await response.json();
-
-        if (response.ok && data.choices && data.choices.length > 0) {
-            const joke = data.choices[0].message.content.trim();
-            jokeField.innerText = joke; // Wyświetlenie żartu
-        } else {
-            jokeField.innerText = "❌ Błąd API: " + (data.error?.message || "Nieznany błąd");
-            addShake(jokeField); // Animacja w przypadku błędu
-        }
-
-    } catch (error) {
-        jokeField.innerText = "❌ Błąd połączenia: " + error.message;
-        addShake(jokeField); // Animacja w przypadku błędu
-    }
-}
-
-    </script>
-     <script src="script.js"></script>
+        </script>
 </body>
 </html>
