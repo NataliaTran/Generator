@@ -283,13 +283,6 @@ nav a:hover {
   90% { opacity: 1; }
   100% { opacity: 0; }
 }
-.heart-confirmation {
-  font-size: 2.5rem;
-  animation: popFade 1s ease-in-out;
-  text-align: center;
-  margin-top: 10px;
-  pointer-events: none;
-}
 
 @keyframes popFade {
   0% {
@@ -309,7 +302,6 @@ nav a:hover {
   position: relative;
   display: inline-block;
 }
-
 .heart-confirmation {
   position: absolute;
   bottom: 100%;
@@ -317,12 +309,10 @@ nav a:hover {
   transform: translateX(-50%);
   font-size: 2.5rem;
   opacity: 0;
+  visibility: hidden;       /* dodaj, by ukryć element */
   pointer-events: none;
-}
-
-.heart-pop {
-  display: block;
-  animation: heartJump 0.8s ease-out;
+  text-align: center;
+  margin-top: 10px;
 }
 
 @keyframes heartJump {
@@ -342,9 +332,12 @@ nav a:hover {
     opacity: 0;
     transform: translate(-50%, -60px) scale(0.8);
   }
-}
-.heart-pop {
-  display: block;
+}.heart-pop {
+  opacity: 1;
+  visibility: visible ;
+  pointer-events: none;
   animation: popFade 1s ease-in-out;
+  display: block;
 }
+
 
