@@ -18,10 +18,12 @@
         </div> 
 
        <!-- Generator po prawej -->
-        <div class="generator">
-            <!-- Pole na żart jako <div> zamiast <input> -->
-            <div id="jokeField" class="joke-box">Kliknij, by wygenerować żart</div>
-            <button id="generateButton">Generuj</button>
+     <div class="generator">
+        <div id="jokeField" class="joke-box">Kliknij, by wygenerować żart</div>     
+            <div class="button-row">
+              <button id="generateButton">Generuj</button>
+              <button id="saveJokeButton">Zapisz żart</button>
+            </div>
         </div>
     </div>
 
@@ -29,6 +31,10 @@
     <div class="back-button-container">
         <a href="index.html" class="back-button">← Strona Główna</a>
     </div>
+    <footer class="page-footer">
+    © 2025 Śmiechosfera — Wszystkie prawa zastrzeżone.
+    </footer>
+
    <script src="script.js"></script>
     <script>
         generateButton.addEventListener("click", (e) => {
