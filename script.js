@@ -43,3 +43,39 @@ addShake(jokeField);
 generateButton.disabled = false;
 };
 
+const saveJokeButton = document.querySelector("#saveJokeButton");
+const savedJokesList = document.querySelector("#savedJokesList");
+
+saveJokeButton.addEventListener("click", () => {
+    const joke = jokeField.innerText.trim();
+
+    if (joke && joke !== "Kliknij, by wygenerować żart" && !joke.startsWith("⏳")) {
+        saveJoke(joke);
+    }
+});
+
+function saveJoke(joke) {
+    // Pobierz obecne żarty z localStorage
+    const jokes = JSON.parse(localStorage.getItem("savedJokes")) || [];
+
+    // Dodaj nowy, jeśli go nie ma
+    if (!jokes.includes(joke)) {
+        jokes.push(joke);
+        localStorage.setItem("savedJokes", JSON.stringify(jokes));
+        renderSavedJokes();
+    }
+}
+
+function renderSavedJokes() {
+    const jokes = JSON.parse(localStorage.getItem("savedJokes")) || [];
+    savedJokesList.innerHTML = "";
+
+    jokes.forEach(j => {
+        const li = document.createElement("li");
+        li.textContent = j;
+        savedJokesList.appendChild(li);
+    });
+}
+
+// Odśwież listę po załadowaniu strony
+renderSavedJokes();
