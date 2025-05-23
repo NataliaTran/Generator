@@ -79,3 +79,14 @@ function renderSavedJokes() {
 
 // Odśwież listę po załadowaniu strony
 renderSavedJokes();
+
+function showHeart() {
+  heart.classList.remove("heart-pop"); // usuń, jeśli jest
+  void heart.offsetWidth;              // wymuś restart animacji
+  heart.classList.add("heart-pop");
+
+  setTimeout(() => {
+    heart.classList.remove("heart-pop");
+  }, 800);
+}
+
