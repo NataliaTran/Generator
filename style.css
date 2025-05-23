@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     font-family: 'Comic Neue', cursive, sans-serif;
-    background: linear-gradient(135deg, #fceabb, #f8b500);
-    color: #2f4858;
+    background:  linear-gradient(135deg, rgb(249, 242, 217), rgb(241, 224, 119));
     text-align: center;
     padding: 50px 20px;
     margin: 0;
@@ -11,11 +16,23 @@ body {
     background-size: cover;
     min-height: 100vh;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 
 /* Nagłówek */
 nav a {
     font-size: 3em;
-    color: #00887c;
+    color: #2ca59b;;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
     font-weight: bold;
@@ -23,17 +40,16 @@ nav a {
 }
 
 nav a:hover {
-    color: #2ca564;
+    color: #2ca59b;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
     transform: scale(1.1);
 }
 
 /* Kontener */
 .container {
-    background-color: #f0f8f6;
-    border: 3px solid #00887c;
-    box-shadow: 5px 5px 15px rgb(230, 207, 76);
-    border-radius: 20px;
+    background: #e6f5f3 ;
+     box-shadow: 0 0 15px 10px rgba(226, 193, 115, 0.581);
+  border-radius: 15px;
     padding: 30px;
     display: flex;
     align-items: center;
@@ -43,6 +59,7 @@ nav a:hover {
     max-width: 1200px;
     margin: 40px auto;
 }
+
 
 /* Obrazek */
 .creature {
@@ -57,19 +74,7 @@ nav a:hover {
     max-width: 350px;
     height: auto;
     border-radius: 15px;
-    animation: zoomIn 0.8s ease-out forwards;
-}
-
-/* Animacja Zoom In */
-@keyframes zoomIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+    animation: fadeInScale 1s ease forwards;
 }
 
 /* Generator */
@@ -110,14 +115,29 @@ nav a:hover {
     padding: 12px 25px;
     margin-top: 20px;
     font-size: 1.2em;
-    background-color: #2ca564;
-    color: #fff;
+    background-color:#00887c;
+    color: rgb(252, 235, 201);
     border: 3px solid black;
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.2s ease;
     box-shadow: 3px 3px 0px black;
     animation: pulse 2.5s infinite ease-in-out;
+}
+#saveJokeButton {
+      font-family: inherit;
+    padding: 12px 25px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    background-color:#00887c;
+    color: rgb(252, 235, 201);
+    border: 3px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 3px 3px 0px black;
+    animation: pulse 2.5s infinite ease-in-out;
+
 }
 
 #generateButton:hover {
@@ -126,6 +146,14 @@ nav a:hover {
     transform: translateY(-2px);
     border: 3px solid black; /* upewniamy się, że obramowanie pozostaje */
 }
+
+.button-row {
+  display: flex;
+  justify-content: center; /* wyśrodkowanie poziome */
+  gap: 20px; /* odstęp między przyciskami */
+  margin-top: 15px;
+}
+
 
 /* Przycisk powrotu */
 .back-button-container {
@@ -137,8 +165,8 @@ nav a:hover {
 .back-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ffffff;
-    color: #2f4858;
+    background-color: #40cec2;
+    color: #000101;
     text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
@@ -147,7 +175,7 @@ nav a:hover {
 }
 
 .back-button:hover {
-    background-color: #2ca564; /* ten sam kolor co przycisk 'generate' */
+    background-color: #00887c;; /* ten sam kolor co przycisk 'generate' */
     color: white;
     transform: translateY(-2px);
 }
@@ -208,4 +236,25 @@ nav a:hover {
         font-size: 1em;
         padding: 8px 16px;
     }
+}
+.page-footer {
+  background-color: #00887c;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  border-top: 4px solid #2ca59b;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
