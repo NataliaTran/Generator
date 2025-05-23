@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 
-
 body {
     font-family: 'Comic Neue', cursive, sans-serif;
     background:  linear-gradient(135deg, rgb(249, 242, 217), rgb(241, 224, 119));
@@ -17,6 +16,10 @@ html, body {
   padding: 0;
   display: flex;
   flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 
