@@ -6,6 +6,7 @@
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
     <nav>
 <a href="egg.html"><h1>Suchary</h1></a>
     </nav>
@@ -17,18 +18,25 @@
              <img src="sucharek.png" alt="Tost" id="creatureImage">
         </div>
 
-          <!-- Generator po prawej -->
+         <!-- Generator po prawej -->
         <div class="generator">
             <!-- Pole na żart jako <div> zamiast <input> -->
             <div id="jokeField" class="joke-box">Kliknij, by wygenerować żart</div>
-            <button id="generateButton">Generuj</button>
+            <div class="button-row">
+              <button id="generateButton">Generuj</button>
+              <button id="saveJokeButton">Zapisz żart</button>
+            </div>
         </div>
     </div>
 
     <!-- Przycisk powrotu -->
     <div class="back-button-container">
         <a href="index.html" class="back-button">← Strona Główna</a>
+        <a href="ulubione.html" class="favorites-link">⭐ Ulubione</a>
     </div>
+    
+    </main>
+    </main>
   <script src="script.js"></script>
     <script>
         generateButton.addEventListener("click", (e) => {
