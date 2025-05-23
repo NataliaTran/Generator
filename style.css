@@ -257,3 +257,18 @@ nav a:hover {
     transform: scale(1);
   }
 }
+.favorites-link {
+        display: inline-block;
+    padding: 10px 20px;
+    background-color: #40cec2;
+    color: #000101;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 3px 3px 0px #00000000;
+}
+.favorites-link:hover {
+    background-color: #00887c;; 
+    color: white;
+    transform: translateY(-2px);}
