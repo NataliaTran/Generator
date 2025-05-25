@@ -153,9 +153,12 @@ nav a:hover {
 
 /* Przycisk powrotu */
 .back-button-container {
-    position: absolute;
+    position: fixed;
     top: 40px;
     left: 30px;
+     z-index: 1000;   /* upewnia się, że będzie nad innymi elementami */
+    display: flex;
+    gap: 10px;
 }
 
 .back-button {
