@@ -1,6 +1,15 @@
 # Śmiechosfera
-„Śmiechosfera” to lekka i humorystyczna strona internetowa stworzona w HTML, CSS i JavaScript, której celem jest dostarczanie użytkownikowi uśmiechu i chwili rozrywki. 
+„Śmiechosfera” to lekka i humorystyczna strona internetowa stworzona, której celem jest dostarczanie użytkownikowi uśmiechu i chwili rozrywki. 
+
+HTML, CSS i JavaScript został użyty do frontendu. 
+Node.js i JavaScript został użyty do backendu. 
+Repozytorium publiczne zostało połączone z prywatnym repozytorium w celach bezpieczeństwa kluczu API.
+
+Wykorzystywany jest moduł 
+
 # Celem projektu jest:
-rozbawienie odwiedzających, oferując losowe, zabawne treści 
+rozbawienie odwiedzających, oferując losowe, zabawne treści wygenerowane przez sztuczną inteligencj oraz przechowywanie najlepszych z nich. 
+
 # Autorzy: 
 Natalia. TH, Marta. K
+ilustracje: Katarzyna. B
